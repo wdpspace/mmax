@@ -1,7 +1,7 @@
 <?php
     $host = "localhost:3306";
     $username = "wdpspace_me";
-    $password = "Hobbit$$7";
+    $password = "Hobbit$$71";
     $database = "wdpspace_mmax";
 
     $conn = new mysqli($host, $username, $password, $database);
