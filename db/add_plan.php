@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-Add Plan <br><br>
-
+<div class="container">
 <form>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -25,7 +24,7 @@ Add Plan <br><br>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
+</div>
 
 </body>
 </html>
