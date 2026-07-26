@@ -17,9 +17,9 @@
     <label>Plan Name</label>
     <input type="text" class="form-control">
   </div>
-  <div class="mb-3 form-check">
+  <div class="mb-3">
+    <label>Fee</label>  
     <input type="number" class="form-control">
-    <label>Fee</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
