@@ -14,6 +14,6 @@
     }
 
     if($conn){
-        echo "Connection succesful! <br>";
+        // echo "Connection succesful! <br>";
     }
    

@@ -1,6 +1,7 @@
 <?php
     include 'dbconnect.php';
     
+    echo $_POST["country"];
 
 ?>
 
