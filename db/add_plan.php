@@ -1,7 +1,7 @@
 <?php
     include 'dbconnect.php';
     
-    echo $_POST["country"];
+    
 
 ?>
 
@@ -37,3 +37,9 @@
 
 </body>
 </html>
+
+<?php
+  echo $_POST["country"] . "<br>";
+  echo $_POST["plan_name"] . "<br>";
+  echo $_POST["fee"] . "<br>";
+?>
