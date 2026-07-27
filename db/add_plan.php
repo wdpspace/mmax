@@ -14,6 +14,7 @@
       }
       catch (mysqli_sql_exception) {
         echo "Could not add new plan";
+        exit;
       }
       
       mysqli_close($conn);
