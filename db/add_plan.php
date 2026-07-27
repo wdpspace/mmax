@@ -6,7 +6,7 @@
       $plan_name = $_POST["plan_name"];
       $fee = $_POST["fee"];
 
-      $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country', '$plan_name', '$fee')";
+      $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country1', '$plan_name', '$fee')";
 
       try{
         mysqli_query($conn, $sql);
