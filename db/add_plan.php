@@ -6,13 +6,14 @@
       $plan_name = $_POST["plan_name"];
       $fee = $_POST["fee"];
 
-      if(empty($_POST["country"]) || empty($_POST["country"]) || empty($_POST["country"])){
+      if(empty($country) || empty($plan_name) || empty($fee)){
         echo "All fields are mandatory";
+        exit;
       }
 
       else{
 
-        $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country1', '$plan_name', '$fee')";
+        $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country', '$plan_name', '$fee')";
 
         try{
           mysqli_query($conn, $sql);
