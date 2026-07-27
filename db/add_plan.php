@@ -1,10 +1,22 @@
 <?php
-    include 'dbconnect.php';
+    include ("dbconnect.php");
     
     if(isset($_POST["submit"])){
-      echo $_POST["country"] . "<br>";
-      echo $_POST["plan_name"] . "<br>";
-      echo $_POST["fee"] . "<br>";
+      $country = $_POST["country"];
+      $plan_name = $_POST["plan_name"];
+      $fee = $_POST["fee"];
+
+      $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country', '$plan_name', '$fee')";
+
+      try{
+        mysqli_query($conn, $sql);
+        echo "New plan added";
+      }
+      catch (mysqli_sql_exception) {
+        echo "Could not add new plan";
+      }
+      
+      mysqli_close($conn);
     }
 ?>
 
