@@ -11,15 +11,18 @@
 
 <label for="country">Country:</label>
 <input type="text" name="country" id="country">
+<br><br>
 
 <label for="">Plan name:</label>
 <select name="plan_name" id="plan_name">
   <option value="postpaid">Postpaid</option>
   <option value="prepaid">Prepaid</option>
 </select>
+<br><br>
 
 <label for="fee">Fee:</label>
 <input type="number" name="fee" id="fee" step="0.01">
+<br><br>
 
 <button type="submit">Submit</button>
 
