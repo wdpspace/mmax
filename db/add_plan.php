@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Plan</title>
 </head>
 <body>
-<div class="container">
-<form method="post">
-  <div class="mb-3">
-    <label>Country</label>
-    <input type="text" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label>Plan Name</label>
-    <input type="text" class="form-control">
-  </div>
-  <div class="mb-3">
-    <label>Fee</label>  
-    <input type="number" class="form-control">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+<form method="post" action="">
+
+<label for="country">Country:</label>
+<input type="text" name="country" id="country">
+
+<label for="">Plan name:</label>
+<select name="plan_name" id="plan_name">
+  <option value="postpaid">Postpaid</option>
+  <option value="prepaid">Prepaid</option>
+</select>
+
+<label for="fee">Fee:</label>
+<input type="number" name="fee" id="fee" step="0.01">
+
+<button type="submit">Submit</button>
+
 </form>
-</div>
 
 </body>
 </html>
