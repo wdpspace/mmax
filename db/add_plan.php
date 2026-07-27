@@ -1,7 +1,7 @@
 <?php
     include 'dbconnect.php';
     
-    if(isset($_POST[])){
+    if(isset($_POST["submit"])){
       echo $_POST["country"] . "<br>";
       echo $_POST["plan_name"] . "<br>";
       echo $_POST["fee"] . "<br>";
@@ -34,7 +34,7 @@
 <input type="number" name="fee" id="fee" step="0.01">
 <br><br>
 
-<button type="submit">Submit</button>
+<button type="submit" name="submit">Submit</button>
 
 </form>
 
