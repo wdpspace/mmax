@@ -7,10 +7,10 @@
     $conn = "";
     
     try {
-    $conn = mysqli_connect($db_server, $db_user, $db_password, $db_name);
+    @$conn = mysqli_connect($db_server, $db_user, $db_password, $db_name);
     }
     catch (mysqli_sql_exception) {
-        echo "Could not connect to database. <br>";
+        exit("Could not connect to database. <br>");
     }
 
     if($conn){
