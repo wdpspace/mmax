@@ -16,6 +16,8 @@
     <table>
         <thead>
             <tr>
+                <th>ID</th>
+                <th>Created</th>
                 <th>Country</th>
                 <th>Plan Name</th>
                 <th>Fees</th>
@@ -29,12 +31,14 @@
                 while($row = mysqli_fetch_assoc($result)){
                     $id = $row["id"];
                     $created = $row["created"];
+                    $country = $row["country"];
                     $name = $row["plan_name"];
                     $fee = $row["fee"];
 
                     echo "<tr>
                             <td>{$id}</td>
                             <td>{$created}</td>
+                            <td>{$country}</td>
                             <td>{$name}</td>
                             <td>{$fee}</td>                 
                         /tr>";
