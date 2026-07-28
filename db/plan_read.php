@@ -1,12 +1,5 @@
 <?php
     include("dbconnect.php");
-
-    $sql = "SELECT * FROM test";
-
-    $results = mysqli_query($conn, $sql);
-
-   
-
 ?>
 
 
@@ -29,7 +22,25 @@
             </tr>
         </thead>
         <tbody>
+        <?php
+            $sql = "SELECT * FROM test";
+            $result = mysqli_query($conn, $sql);
+            if($result){
+                while($row = mysqli_fetch_assoc($result)){
+                    $id = $row["id"];
+                    $created = $row["created"];
+                    $name = $row["plan_name"];
+                    $fee = $row["fee"];
 
+                    echo "<tr>
+                            <td>{$id}</td>
+                            <td>{$created}</td>
+                            <td>{$name}</td>
+                            <td>{$fee}</td>                 
+                        /tr>"
+                }
+            }
+        ?>
         </tbody>
     </table>
 </body>
