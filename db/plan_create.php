@@ -10,7 +10,7 @@
 
         try{
           mysqli_query($conn, $sql); 
-          echo "New plan added";
+          header("location:plan_read.php");
         }
         catch (mysqli_sql_exception) {
           exit("Could not add new plan");
