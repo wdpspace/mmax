@@ -6,26 +6,18 @@
       $plan_name = $_POST["plan_name"];
       $fee = $_POST["fee"];
 
-      if(empty($country) || empty($plan_name) || empty($fee)){
-        
-        exit("All fields are mandatory");
-      }
-
-      else{
-
-        $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country', '$plan_name', '$fee')";
+      $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country', '$plan_name', '$fee')";
 
         try{
           mysqli_query($conn, $sql);
           echo "New plan added";
         }
         catch (mysqli_sql_exception) {
-          echo "Could not add new plan";
+          exit("Could not add new plan");
         }
         
         mysqli_close($conn);
       }
-    }
 ?>
 
 <!DOCTYPE html>
