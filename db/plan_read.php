@@ -5,12 +5,7 @@
 
     $results = mysqli_query($conn, $sql);
 
-    try{
-
-    }
-    catch{
-
-    }
+   
 
 ?>
 
@@ -34,7 +29,7 @@
             </tr>
         </thead>
         <tbody>
-            
+
         </tbody>
     </table>
 </body>
