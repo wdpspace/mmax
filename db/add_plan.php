@@ -9,7 +9,7 @@
       $sql = "INSERT INTO test (country, plan_name, fee) VALUES ('$country', '$plan_name', '$fee')";
 
         try{
-          mysqli_query($conn, $sql);
+          mysqli_query($conn, $sql); 
           echo "New plan added";
         }
         catch (mysqli_sql_exception) {
