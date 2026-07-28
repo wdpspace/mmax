@@ -7,8 +7,8 @@
       $fee = $_POST["fee"];
 
       if(empty($country) || empty($plan_name) || empty($fee)){
-        echo "All fields are mandatory";
-        exit;
+        
+        exit("All fields are mandatory");
       }
 
       else{
