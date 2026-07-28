@@ -37,7 +37,7 @@
                             <td>{$created}</td>
                             <td>{$name}</td>
                             <td>{$fee}</td>                 
-                        /tr>"
+                        /tr>";
                 }
             }
         ?>
