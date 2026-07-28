@@ -29,7 +29,7 @@
 </head>
 <body>
 
-<form method="post" action="add_plan.php">
+<form method="post" action="plan_create.php">
 
 <label for="country">Country:</label>
 <input type="text" name="country" id="country">

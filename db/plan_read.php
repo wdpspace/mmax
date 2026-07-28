@@ -11,7 +11,7 @@
     <title>Read Plans</title>
 </head>
 <body>
-    <a href="plan_add.php">Add plan</a><br><br>
+    <a href="plan_create.php">Add plan</a><br><br>
 
     <table>
         <thead>
