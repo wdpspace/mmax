@@ -1,7 +1,7 @@
 <?php
 
     $db_server = "localhost:3306";
-    $db_user = "wdpspace_me";
+    $db_user = "wdpspace_me1";
     $db_password = "Hobbit$$7";
     $db_name = "wdpspace_mmax";
     $conn = "";
