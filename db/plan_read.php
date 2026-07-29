@@ -42,7 +42,7 @@
                             <td>{$country}</td>
                             <td>{$name}</td>
                             <td>{$fee}</td>
-                            <td> <a href=''>Update</a><br><a href=''>Delete</a></td>                 
+                            <td> <a href='plan_update.php?id={$id}'>Update</a></td>                 
                         </tr>";
                 }
             }
