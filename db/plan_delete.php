@@ -10,7 +10,8 @@ if(isset($_GET["id"])){
    $result = mysqli_query($conn, $sql);
 
    if($result){
-    echo "Delete successful";
+    //echo "Delete successful";
+    header("location:plan_read.php");
    }
    else{
     exit("Could not delete. <br>");
