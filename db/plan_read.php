@@ -21,6 +21,7 @@
                 <th>Country</th>
                 <th>Plan Name</th>
                 <th>Fees</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
