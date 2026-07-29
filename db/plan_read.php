@@ -41,7 +41,7 @@
                             <td>{$country}</td>
                             <td>{$name}</td>
                             <td>{$fee}</td>                 
-                        /tr>";
+                        </tr>";
                 }
             }
         ?>
