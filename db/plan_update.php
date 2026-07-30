@@ -7,7 +7,7 @@
       $plan_name = $_POST["plan_name"];
       $fee = $_POST["fee"];
 
-      $sql = "UPDATE test SET id = $id, country = $country, plan_name = $plan_name, fee = $fee WHERE id = $id";
+      $sql = "UPDATE test SET id = '$id', country = '$country', plan_name = '$plan_name', fee = '$fee' WHERE id = $id";
 
         try{
           mysqli_query($conn, $sql);
