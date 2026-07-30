@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<form method="post" action="plan_update.php?id = <?php $id; ?>">
+<form method="post" action="plan_update.php">
 
 <label for="country">Country:</label>
 <input type="text" name="country" id="country">
