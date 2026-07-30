@@ -7,7 +7,7 @@
       $plan_name = $_POST["plan_name"];
       $fee = $_POST["fee"];
 
-      $sql = "UPDATE test SET id = '$id', country = '$country', plan_name = '$plan_name', fee = '$fee' WHERE id = $id";
+      $sql = "UPDATE test SET country = '$country', plan_name = '$plan_name', fee = '$fee' WHERE id = $id";
 
         try{
           mysqli_query($conn, $sql);
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<form method="post" action="plan_create.php">
+<form method="post" action="plan_update.php">
 
 <label for="country">Country:</label>
 <input type="text" name="country" id="country">
