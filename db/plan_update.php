@@ -1,6 +1,6 @@
 <?php
     include ("dbconnect.php");
-    $id = $_GET['id'];
+    $id = $_GET["id"];
     echo $id;
     if(isset($_POST["submit"])){
       $country = $_POST["country"];
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<form method="post" action="plan_update.php">
+<form method="post" action="plan_update.php?id = <?php $id; ?>">
 
 <label for="country">Country:</label>
 <input type="text" name="country" id="country">
