@@ -3,7 +3,24 @@
 include ("dbconnect.php");
 
 if(isset($_POST["submit"])){
-    echo "Form has been submitted";
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    $age = $_POST["age"];
+    $pet = $_POST["pet"];
+
+    $sql = "INSERT INTO users (firstname, lastname, age, pet) VALUES $firstname, $lastname, $age, $pet";
+    
+    $result = mysqli_connect(dbconnect(), $sql);
+
+    if($result){
+        echo "New user added successfully";
+    }
+    else{
+        echo "Error adding new user";
+        exit;
+    }
+
+
 }
 
 ?>
