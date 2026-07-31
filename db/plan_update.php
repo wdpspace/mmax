@@ -10,6 +10,23 @@
       $plan_name = $row["plan_name"];
       $fee = $row["fee"];
     
+
+    if(isset("submit")){
+      $id = $_GET["id"];
+      $country = $_POST["country"];
+      $plan_name = $_POST["plan_name"];
+      $fee = $_POST["fee"];
+
+      $sql = "UPDATE test SET country = {$country}, plan_name = {$plan}, fee = {$fee} WHERE id = {$id}";
+      
+      try{
+        mysqli_query($sql);
+        echo "Updated successfully!";
+      }
+      catch{
+        exit (echo "Did not update.");
+      }
+    }
     
 ?>
 
