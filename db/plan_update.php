@@ -48,14 +48,14 @@
 <br><br>
 
 <label for="plan_name">Plan name:</label>
-<select name="plan_name" id="plan_name">
+<select name="plan_name" id="plan_name" value="<?php echo $plan_name;  ?>">
   <option value="postpaid">Postpaid</option>
   <option value="prepaid">Prepaid</option>
 </select>
 <br><br>
 
 <label for="fee">Fee:</label>
-<input type="number" name="fee" id="fee" step="0.01">
+<input type="number" name="fee" id="fee" step="0.01" value="<?php echo $fee; ?>">
 <br><br>
 
 <button type="submit" name="submit">Update</button>
