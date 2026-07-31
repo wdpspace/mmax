@@ -3,7 +3,7 @@
 
     $id = $_GET["id"];
     echo $id;
-    $sql = "SELECT * FROM test WHERE id = $id";
+    $sql = "SELECT * FROM test WHERE id = '$id'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
       $country = $row["country"];
