@@ -1,6 +1,9 @@
 <?php
     include ("dbconnect.php");
     
+    $id = $_GET["id"];
+    echo $id;
+
     if(isset($_POST["submit"])){
       $country = $_POST["country"];
       $plan_name = $_POST["plan_name"];
