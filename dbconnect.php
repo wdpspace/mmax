@@ -1,5 +1,7 @@
 <?php
 
+function dbconnect(){
+
     $db_server = "localhost:3306";
     $db_user = "wdpspace_me";
     $db_password = "Hobbit$$7";
@@ -11,4 +13,9 @@
         echo mysqli_connect_error();
         exit;
     }
+
+    return $conn;
+}
+
+// To call function, use $conn = dbconnect() in other pages.
     
