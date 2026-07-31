@@ -24,7 +24,7 @@
         echo "Updated successfully!";
       }
       catch{
-        exit (echo "Did not update.");
+        exit ("Did not update");
       }
     }
     
