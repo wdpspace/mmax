@@ -20,7 +20,7 @@
       $sql = "UPDATE test SET country = {$country}, plan_name = {$plan}, fee = {$fee} WHERE id = {$id}";
       
       try{
-        mysqli_query($sql);
+        mysqli_query($conn, $sql);
         echo "Updated successfully!";
       }
       catch{
