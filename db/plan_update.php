@@ -9,7 +9,8 @@
       $country = $row["country"];
       $plan_name = $row["plan_name"];
       $fee = $row["fee"];
-    vardump($row);
+    
+      echo $country . ", " . $plan_name . ", " . $fee ;
 
     if(isset($_POST["submit"])){
       $id = $_GET["id"];
