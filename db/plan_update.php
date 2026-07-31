@@ -11,7 +11,7 @@
       $fee = $row['fee'];
 
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['update'])){
       $country = $_POST['country'];
       $plan_name = $_POST['plan_name'];
       $fee = $_POST['fee'];
@@ -57,7 +57,7 @@
 <input type="number" name="fee" id="fee" step="0.01" value="<?php echo $fee; ?>">
 <br><br>
 
-<button type="submit" name="submit">Update</button>
+<button type="submit" name="update">Update</button>
 
 </form>
 
