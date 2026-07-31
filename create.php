@@ -8,7 +8,7 @@ if(isset($_POST["submit"])){
     $age = $_POST["age"];
     $pet = $_POST["pet"];
 
-    $sql = "INSERT INTO users (firstname, lastname, age, pet) VALUES '$firstname', '$lastname', '$age', '$pet'";
+    $sql = "INSERT INTO users (firstname, lastname, age, pet) VALUES ($firstname, $lastname, $age, $pet)";
     
     $conn = dbconnect();
 
