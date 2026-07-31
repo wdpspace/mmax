@@ -1,6 +1,7 @@
 <?php
 
 include ("dbconnect.php");
+$conn = dbconnect();
 
 if(isset($_POST["submit"])){
     $firstname = $_POST["firstname"];
@@ -10,7 +11,7 @@ if(isset($_POST["submit"])){
 
     $sql = "INSERT INTO users (firstname, lastname, age, pet) VALUES $firstname, $lastname, $age, $pet";
     
-    $conn = dbconnect();
+    
 
     $result = mysqli_connect($conn, $sql);
 
