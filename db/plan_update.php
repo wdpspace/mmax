@@ -44,7 +44,7 @@
 <form method="post" action="plan_update.php">
 
 <label for="country">Country:</label>
-<input type="text" name="country" id="country">
+<input type="text" name="country" id="country" value="<?php echo $country;   ?>">
 <br><br>
 
 <label for="plan_name">Plan name:</label>
