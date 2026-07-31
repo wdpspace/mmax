@@ -4,6 +4,14 @@
     $id = $_GET["id"];
     echo $id;
 
+    $sql = "SELECT * FROM test WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+      $country = $row["country"];
+      $plan_name = $row["plan_name"];
+      $fee = $row["fee"];
+
+
     if(isset($_POST["submit"])){
       $country = $_POST["country"];
       $plan_name = $_POST["plan_name"];
