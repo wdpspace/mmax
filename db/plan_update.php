@@ -3,6 +3,12 @@
 
     $id = $_GET["id"];
     echo $id;
+    $sql = "SELECT * FROM test WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+      $country = $row["country"];
+      $plan_name = $row["plan_name"];
+      $fee = $row["fee"];
     
     
 ?>
@@ -19,7 +25,7 @@
 <form method="post" action="plan_update.php">
 
 <label for="country">Country:</label>
-<input type="text" name="country" id="country">
+<input type="text" name="country" id="country" value="<?php echo $country; ?>>
 <br><br>
 
 <label for="plan_name">Plan name:</label>
@@ -30,7 +36,7 @@
 <br><br>
 
 <label for="fee">Fee:</label>
-<input type="number" name="fee" id="fee" step="0.01">
+<input type="number" name="fee" id="fee" step="0.01" value="<?php echo $fee; ?>>
 <br><br>
 
 <button type="submit" name="submit">Update</button>
