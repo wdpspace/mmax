@@ -18,14 +18,16 @@
       $fee = $_POST["fee"];
 
       $sql = "UPDATE test SET country = '$country', plan_name = '$plan', fee = '$fee' WHERE id = '$id'";
+      $result = mysqli_query($conn, $sql);
       
-      try{
-        mysqli_query($conn, $sql);
-        echo "Updated successfully!";
+      if($result){
+          header("location:plan_read.php");
       }
-      catch{
-        exit ("Did not update");
+      else {
+        exit ("Could not update record");
       }
+
+       
     }
     
 ?>
