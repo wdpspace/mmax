@@ -11,7 +11,7 @@
       $fee = $row["fee"];
     
 
-    if(isset["submit"]){
+    if(isset($_POST["submit"])){
       $id = $_GET["id"];
       $country = $_POST["country"];
       $plan_name = $_POST["plan_name"];
