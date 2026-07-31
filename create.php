@@ -19,12 +19,15 @@
 
         <label for="firstname">First Name:</label>
         <input type="text" name="firstname" id="firstname">
+        <br><br>
 
         <label for="lastname">Last Name:</label>
         <input type="text" name="lastname" id="lastname">
+        <br><br>
 
         <label for="age">Age:</label>
         <input type="number" name="age" id="age">
+        <br><br>
 
         <label for="pet">Pet:</label>
         <select name="pet" id="pet">
@@ -33,6 +36,7 @@
             <option value="bird">Bird</option>
             <option value="fish">Fish</option>
         </select>
+        <br><br>
 
         <button type="submit" name="submit">Add User</button>
         
