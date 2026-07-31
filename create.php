@@ -10,7 +10,9 @@ if(isset($_POST["submit"])){
 
     $sql = "INSERT INTO users (firstname, lastname, age, pet) VALUES $firstname, $lastname, $age, $pet";
     
-    $result = mysqli_connect(dbconnect(), $sql);
+    $conn = dbconnect();
+
+    $result = mysqli_connect($conn, $sql);
 
     if($result){
         echo "New user added successfully";
