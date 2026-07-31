@@ -13,7 +13,7 @@
           header("location:plan_read.php");
         }
         catch (mysqli_sql_exception) {
-          exit("Could not add new plan");
+          exit("Could not add new plan.". mysqli_connect_error() );
         }
         
         mysqli_close($conn);
