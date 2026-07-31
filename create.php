@@ -1,6 +1,10 @@
 <?php
 
+include ("dbconnect.php");
 
+if(isset($_POST["submit"])){
+    echo "Form has been submitted";
+}
 
 ?>
 
@@ -15,7 +19,7 @@
 
     <H2>Create User</H2><br><br>
 
-    <form action="">
+    <form action="create.php" method="post">
 
         <label for="firstname">First Name:</label>
         <input type="text" name="firstname" id="firstname">
