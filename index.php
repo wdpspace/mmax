@@ -26,6 +26,8 @@
 <body>
 
     <H2>Create User</H2><br><br>
+
+    <a href="create.php">Add new user</a>
     
     <table>
         <thead>
