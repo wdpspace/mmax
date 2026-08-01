@@ -2,16 +2,19 @@
 
 include ("dbconnect.php");
 $conn = dbconnect();
-$id = $_GET['id'];
-$sql = "SELECT * FROM users WHERE id = $id";
-$result = mysqli_query($conn, $sql);
-if($result){
-    $row = mysqli_fetch_assoc($result);
-}
-    
-else{
-    echo "Error getting data for record to be updated.";
-    exit;
+
+if($_SERVER['REQUEST_METHOD'] === 'GET'){
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM users WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+        $row = mysqli_fetch_assoc($result);
+    }
+    else{
+        echo "Error getting data for record to be updated.";
+        exit;
+    }
 }
 
 if(isset($_POST["submit"])){
