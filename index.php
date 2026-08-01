@@ -1,5 +1,4 @@
 <?php
-
     include ("dbconnect.php");
 
     $sql = "SELECT * FROM users";
@@ -11,8 +10,6 @@
         echo "Error loading data.";
         exit;
     }
-
-
 ?>
 
 
