@@ -25,6 +25,8 @@
                 <th>Lastname</th>
                 <th>Age</th>
                 <th>Pet</th>
+                <th>Update</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -42,15 +44,16 @@
                                 echo "<td> {$row['lastname']} </td>";
                                 echo "<td> {$row['age']} </td>";
                                 echo "<td> {$row['pet']} </td>";
+                                echo "<td> <a href='update.php?id=[{$row['id']} </td>";
+                                echo "<td></td>";
                                 echo "</tr>";
                             }
-                        //continue from here
                     }
             ?>
             
         
         </tbody>
 
-    </table>
+    </table>    
 </body>
 </html>
