@@ -21,14 +21,14 @@ if(isset($_POST["submit"])){
     $age = $_POST["age"];
     $pet = $_POST["pet"];
 
-    $sql = "INSERT INTO users (firstname, lastname, age, pet) VALUES ('$firstname', '$lastname', '$age', '$pet')";
+    $sql = "UPDATE users SET firstname = '$firstname', lastname = '$lastname', age = '$age', pet = '$pet'";
     
     $conn = dbconnect();
 
     $result = mysqli_query($conn, $sql);
 
     if($result){
-        //echo "New user added successfully";
+        //echo "User updated successfully";
         header("location:index.php");
 
     }
@@ -55,24 +55,24 @@ if(isset($_POST["submit"])){
 
     <form action="create.php" method="post">
         
-        <label for="id">First Name:</label>
-        <input type="text" name="id" id="id" value=<?php echo $row['firstname'] ?> readonly>
+        <label for="id">id:</label>
+        <input type="text" name="id" id="id" value=<?php echo $row['id'] ?> readonly>
         <br><br>
 
         <label for="firstname">First Name:</label>
-        <input type="text" name="firstname" id="firstname">
+        <input type="text" name="firstname" id="firstname" value=<?php echo $row['firstname'] ?>>
         <br><br>
 
         <label for="lastname">Last Name:</label>
-        <input type="text" name="lastname" id="lastname">
+        <input type="text" name="lastname" id="lastname" value=<?php echo $row['lastname'] ?>>
         <br><br>
 
         <label for="age">Age:</label>
-        <input type="number" name="age" id="age">
+        <input type="number" name="age" id="age" value=<?php echo $row['age'] ?>>
         <br><br>
 
         <label for="pet">Pet:</label>
-        <select name="pet" id="pet">
+        <select name="pet" id="pet" value=<?php echo $row['pet'] ?>>
             <option value="cat">Cat</option>
             <option value="dog">Dog</option>
             <option value="bird">Bird</option>
