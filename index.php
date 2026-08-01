@@ -42,7 +42,7 @@
                                 echo "<td> {$row['lastname']} </td>";
                                 echo "<td> {$row['age']} </td>";
                                 echo "<td> {$row['pet']} </td>";
-                                echo "</tr>"
+                                echo "</tr>";
                             }
                         //continue from here
                     }
