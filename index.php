@@ -36,7 +36,7 @@
                         while($row = mysqli_fetch_assoc($result))
                             {
                                 echo "<tr>";
-                                echo "<td> $row['id'] </td>"; 
+                                echo "<td> {$row['id']} </td>"; 
                                 echo "<td> $row["created"] </td>";
                                 echo "<td> $row["firstname"] </td>";
                                 echo "<td> $row["lastname"] </td>";
