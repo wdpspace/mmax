@@ -49,6 +49,8 @@
                 <td><?php echo $row['lastname'] ?></td>
                 <td><?php echo $row['age'] ?></td>
                 <td><?php echo $row['pet'] ?></td>
+                <td><a href="update.php?id="<?php echo $row['id']?>>Update</a></td>
+                <td><a href="delete.php?id="<?php echo $row['id']?>>Delete</a></td>
             </tr>
             <?php endwhile; ?>
             
