@@ -21,7 +21,7 @@ if(isset($_POST["submit"])){
     $age = $_POST["age"];
     $pet = $_POST["pet"];
 
-    $sql = "UPDATE users SET firstname = '$firstname', lastname = '$lastname', age = '$age', pet = '$pet'";
+    $sql = "UPDATE users SET firstname = '$firstname', lastname = '$lastname', age = '$age', pet = '$pet' WHERE id = $id";
     
     $conn = dbconnect();
 
@@ -53,7 +53,7 @@ if(isset($_POST["submit"])){
 
     <H2>Update User</H2><br><br>
 
-    <form action="create.php" method="post">
+    <form action="update.php" method="post">
         
         <label for="id">id:</label>
         <input type="text" name="id" id="id" value=<?php echo $row['id'] ?> readonly>
@@ -80,7 +80,7 @@ if(isset($_POST["submit"])){
         </select>
         <br><br>
 
-        <button type="submit" name="submit">Add User</button>
+        <button type="submit" name="submit">Update</button>
         
     </form>
 </body>
