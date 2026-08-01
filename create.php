@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
 
     if($result){
         //echo "New user added successfully";
-        header("location:plan_read.php");
+        header("location:index.php");
 
     }
     else{
