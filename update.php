@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET'){
 }
 
 if(isset($_POST["submit"])){
-    
+    $id = $_POST['id'];
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
     $age = $_POST["age"];
