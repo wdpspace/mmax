@@ -74,11 +74,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         <br><br>
 
         <label for="pet">Pet:</label>
-        <select name="pet" id="pet" value=<?php echo $row['pet'] ?>>
-            <option value="cat">Cat</option>
-            <option value="dog">Dog</option>
-            <option value="bird">Bird</option>
-            <option value="fish">Fish</option>
+        <select name="pet" id="pet">
+            <option value="cat" <?= $row['pet'] == 'cat' ? 'selected' : '' ?>>Cat</option>
+            <option value="dog" <?= $row['pet'] == 'dog' ? 'selected' : '' ?>>Dog</option>
+            <option value="bird" <?= $row['pet'] == 'bird' ? 'selected' : '' ?>>Bird</option>
+            <option value="fish" <?= $row['pet'] == 'fish' ? 'selected' : '' ?>>Fish</option>
         </select>
         <br><br>
 
