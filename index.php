@@ -2,6 +2,17 @@
 
     include ("dbconnect.php");
 
+    $sql = "SELECT * FROM users";
+    $conn = dbconnect();
+
+    $result = $result = mysqli_query($conn, $sql);
+
+    if(!$result){
+        echo "Error loading data.";
+        exit;
+    }
+
+
 ?>
 
 
@@ -30,33 +41,16 @@
             </tr>
         </thead>
         <tbody>
-            <?php
-                $sql = "SELECT * FROM users";
-                    $conn = dbconnect();
-                    $result = mysqli_query($conn, $sql);
-                    if($result){
-                        while($row = mysqli_fetch_assoc($result))
-                            {
-                               $id = $row['id'];
-                               $created = $row['created'];
-                               $firstname = $row['firstname'];
-                               $lastname = $row['lastname'];
-                               $age = $row['age'];
-                               $pet = $row['pet'];
-                        
-                                echo "<tr>";
-                                echo "<td> $id </td>"; 
-                                echo "<td> $created </td>";
-                                echo "<td> $firstname </td>";
-                                echo "<td> $lastname </td>";
-                                echo "<td> $age </td>";
-                                echo "<td> $pet </td>";
-                                echo "<td> <a href='update.php?id=$id'>Update</a></td>";
-                                echo "<td></td>";
-                                echo "</tr>";
-                            }
-                    }
-            ?>
+            <?php while($row = mysqli_fetch_assoc($result)): ?>
+            <tr>
+                <td><?php echo $row['id'] ?></td>
+                <td><?php echo $row['created'] ?></td>
+                <td><?php echo $row['firstname'] ?></td>
+                <td><?php echo $row['lastname'] ?></td>
+                <td><?php echo $row['age'] ?></td>
+                <td><?php echo $row['pet'] ?></td>
+            </tr>
+            <?php endwhile; ?>
             
         
         </tbody>
