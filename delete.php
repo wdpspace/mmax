@@ -11,8 +11,8 @@ $sql = "DELETE FROM users WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 
 if($result){
-    echo "Row deleted successfully!";
-    //header("location:index.php");
+    //echo "Row deleted successfully!";
+    header("location:index.php");
 }
 else{
     echo "Could not delete row.";
