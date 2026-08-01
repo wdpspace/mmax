@@ -35,7 +35,10 @@
                     if($result){
                         while($row = mysqli_fetch_assoc($result))
                             {
-                                echo "there is a row";
+                                echo "<tr>";
+                                echo "<td> $row["id"] </td>"; 
+
+                                echo "</tr>"
                             };
                         //continue from here
                     }
