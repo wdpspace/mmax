@@ -41,10 +41,7 @@
                     }
             ?>
             <?php
-                    
-                <td></td>
-
-            </tr>
+        
         </tbody>
 
     </table>
