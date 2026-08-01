@@ -37,14 +37,21 @@
                     if($result){
                         while($row = mysqli_fetch_assoc($result))
                             {
+                               $id = $row['id'];
+                               $created = $row['created'];
+                               $firstname = $row['firstname'];
+                               $lastname = $row['lastname'];
+                               $age = $row['age'];
+                               $pet = $row['pet'];
+                        
                                 echo "<tr>";
-                                echo "<td> {$row['id']} </td>"; 
-                                echo "<td> {$row['created']} </td>";
-                                echo "<td> {$row['firstname']} </td>";
-                                echo "<td> {$row['lastname']} </td>";
-                                echo "<td> {$row['age']} </td>";
-                                echo "<td> {$row['pet']} </td>";
-                                echo "<td> <a href='update.php?id=[{$row['id']} </td>";
+                                echo "<td> $id </td>"; 
+                                echo "<td> $created </td>";
+                                echo "<td> $firstname </td>";
+                                echo "<td> $lastname </td>";
+                                echo "<td> $age </td>";
+                                echo "<td> $pet </td>";
+                                echo "<td> <a href='update.php?id=$id> </td>";
                                 echo "<td></td>";
                                 echo "</tr>";
                             }
