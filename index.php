@@ -28,15 +28,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <?php
-                    $sql = "SELECT * FROM users";
+            <?php
+                $sql = "SELECT * FROM users";
                     $conn = dbconnect();
                     $result = mysqli_query($conn, $sql);
                     if($result){
+                        while($row = mysqli_fetch_assoc($result))
+                            {
+                                
+                            };
                         //continue from here
                     }
-                ?>
+            ?>
+            <?php
+                    
+                <td></td>
+
             </tr>
         </tbody>
 
