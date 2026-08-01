@@ -37,11 +37,11 @@
                             {
                                 echo "<tr>";
                                 echo "<td> {$row['id']} </td>"; 
-                                echo "<td> $row["created"] </td>";
-                                echo "<td> $row["firstname"] </td>";
-                                echo "<td> $row["lastname"] </td>";
-                                echo "<td> $row["age"] </td>";
-                                echo "<td> $row["pet"] </td>";
+                                echo "<td> {$row['created']} </td>";
+                                echo "<td> {$row['firstname']} </td>";
+                                echo "<td> {$row['lastname']} </td>";
+                                echo "<td> {$row['age']} </td>";
+                                echo "<td> {$row['pet']} </td>";
 
                                 echo "</tr>"
                             };
