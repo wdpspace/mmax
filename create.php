@@ -15,7 +15,9 @@ if(isset($_POST["submit"])){
     $result = mysqli_query($conn, $sql);
 
     if($result){
-        echo "New user added successfully";
+        //echo "New user added successfully";
+        header("location:plan_read.php");
+
     }
     else{
         echo "Error adding new user";
