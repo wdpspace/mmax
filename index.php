@@ -51,7 +51,7 @@
                                 echo "<td> $lastname </td>";
                                 echo "<td> $age </td>";
                                 echo "<td> $pet </td>";
-                                echo "<td> <a href='update.php?id=$id> </td>";
+                                echo "<td> <a href='update.php?id=$id> </a></td>";
                                 echo "<td></td>";
                                 echo "</tr>";
                             }
