@@ -56,7 +56,7 @@ if(isset($_POST["submit"])){
     <form action="create.php" method="post">
         
         <label for="id">First Name:</label>
-        <input type="text" name="id" id="id" value=<?php $row['firstname'] ?> readonly>
+        <input type="text" name="id" id="id" value=<?php echo $row['firstname'] ?> readonly>
         <br><br>
 
         <label for="firstname">First Name:</label>
