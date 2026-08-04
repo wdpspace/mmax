@@ -2,7 +2,8 @@
 
 include ("dbconnect.php");
 
-if(isset($_POST["submit"])){
+if($_SERVER['REQUEST_METHOD']){
+
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
     $age = $_POST["age"];
@@ -23,8 +24,6 @@ if(isset($_POST["submit"])){
         echo "Error adding new user";
         exit;
     }
-
-
 }
 
 ?>
