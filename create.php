@@ -2,7 +2,7 @@
 
 include ("dbconnect.php");
 
-if($_SERVER['REQUEST_METHOD' === 'GET']){
+if($_SERVER['REQUEST_METHOD'] === 'GET'){
 
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
