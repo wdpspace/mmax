@@ -38,7 +38,17 @@ $fields = mysqli_fetch_fields($result);
                 </tr>
             </thead>
             <tbody>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>"
+                            foreach ($row as $value){
+                                echo "<td>$value</td>";
+                            }
+                        echo "</tr>"
+                    }
 
+                    ?>
+            
             </tbody>
         </table>
     </form>
