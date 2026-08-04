@@ -4,7 +4,16 @@ require ("dbconnect.php");
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
+    
+
 }
+
+$sql = "SELECT * FROM plans";
+$conn = dbconnect();
+$result = mysqli_query($conn, $sql);
+
+$fields = mysqli_fetch_fields($result);
+
 
 ?>
 
@@ -22,7 +31,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         <table>
             <thead>
                 <tr>
-                    <th>id</th>
+                    <?php foreach($fields as $field){
+                            echo "<th>" . $field->name . "</th>";
+                        }
+                    ?>
                 </tr>
             </thead>
             <tbody>
