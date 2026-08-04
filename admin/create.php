@@ -40,11 +40,11 @@ $fields = mysqli_fetch_fields($result);
             <tbody>
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>"
+                        echo "<tr>";
                             foreach ($row as $value){
                                 echo "<td>$value</td>";
                             }
-                        echo "</tr>"
+                        echo "</tr>";
                     }
 
                     ?>
