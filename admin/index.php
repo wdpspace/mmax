@@ -51,8 +51,8 @@ $fields = mysqli_fetch_fields($result);
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";    
                     
-                        echo"<td><a href='href=update.php?id="$row['id']">Update</a></td>";
-                        echo"<td><a href='href=delete.php?id="$row['id']">Delete</a></td>";
+                        echo "<td><a href='href=update.php?id="$row['id']"'>Update</a></td>";
+                        echo"<td><a href='href=delete.php?id="$row['id']"'>Delete</a></td>";
                         
                         foreach ($row as $value){
                             echo "<td>$value</td>";
