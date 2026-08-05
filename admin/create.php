@@ -25,7 +25,8 @@ $fields = mysqli_fetch_fields($result);
     <title>Add New Plan</title>
 </head>
 <body>
-    <h1>Add New Plan</h1> 
+    <h1>Add New Plan</h1><br><br>
+    <a href="index.php">Back to Summary</a> 
 
     <form action="">
         <table>
