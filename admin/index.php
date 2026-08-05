@@ -38,6 +38,8 @@ $fields = mysqli_fetch_fields($result);
         <table>
             <thead>
                 <tr>
+                    <th>Update</th>
+                    <th>Delete</th>
                     <?php foreach($fields as $field){
                             echo "<th>" . $field->name . "</th>";
                         }
@@ -47,10 +49,15 @@ $fields = mysqli_fetch_fields($result);
             <tbody>
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                            foreach ($row as $value){
-                                echo "<td>$value</td>";
-                            }
+                        echo "<tr>";    
+                    
+                        echo"<td><a href='href=update.php?id="$row['id']">Update</a></td>";
+                        echo"<td><a href='href=delete.php?id="$row['id']">Delete</a></td>";
+                        
+                        foreach ($row as $value){
+                            echo "<td>$value</td>";
+                        }
+                        
                         echo "</tr>";
                     }
 
