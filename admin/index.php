@@ -21,6 +21,7 @@ $fields = mysqli_fetch_fields($result);
         
         table{
             font-family: Arial, sans-serif;
+            font-size: 10px;
         }
         th, td{
             border: 1px solid #ddd;
