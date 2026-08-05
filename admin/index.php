@@ -16,6 +16,18 @@ $fields = mysqli_fetch_fields($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan Summary</title>
+
+    <style>
+        
+        table{
+            font-family: Arial, sans-serif;
+        }
+        th, td{
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <h1>Plan Summary</h1><br><br>
