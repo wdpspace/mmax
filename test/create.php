@@ -1,6 +1,7 @@
 <?php
 
 include ("dbconnect.php");
+include ("mapping.php");
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
