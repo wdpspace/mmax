@@ -56,10 +56,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
         <label for="pet">Pet:</label>
         <select name="pet" id="pet">
+            <?php foreach ($mapping as $key => $value) {
+                echo "<option value=$key>$value</option>";
+            } ?>
+            <!--
             <option value="cat">Cat</option>
             <option value="dog">Dog</option>
             <option value="bird">Bird</option>
             <option value="fish">Fish</option>
+            -->
         </select>
         <br><br>
 
