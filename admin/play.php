@@ -10,5 +10,5 @@ $result = mysqli_query($conn, $sql);
 $fields = mysqli_fetch_fields($result);
 
 foreach ($fields as $field){
-    echo $field->name;
+    echo $field->name "<br>";
 };
