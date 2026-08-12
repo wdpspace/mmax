@@ -1,5 +1,6 @@
 <?php
 echo "hello";
+/*
 require ("dbconnect.php");
 
 $sql = "SELECT * FROM plans";
@@ -12,3 +13,4 @@ $fields = mysqli_fetch_fields($result);
 foreach ($fields as $field){
     echo $field->name;
 };
+*/
