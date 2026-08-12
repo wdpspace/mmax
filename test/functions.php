@@ -1,5 +1,5 @@
 <?php
 
-function dropdown($conn, ){
+function dropdown($conn, $table){
 
 }

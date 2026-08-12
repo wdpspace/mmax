@@ -1,10 +1,10 @@
 <?php
-    include ("dbconnect.php");
+    require ("dbconnect.php");
 
     $sql = "SELECT * FROM users";
     $conn = dbconnect();
 
-    $result = $result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
 
     if(!$result){
         echo "Error loading data.";
