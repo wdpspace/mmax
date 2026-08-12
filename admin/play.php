@@ -13,4 +13,5 @@ $fields = mysqli_fetch_fields($result);
 foreach ($fields as $field){
     echo $field->name;
 };
+12
 */
