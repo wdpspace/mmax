@@ -7,6 +7,8 @@ $conn = dbconnect();
 
 $result = mysqli_query($conn, $sql);
 
-$row = mysqli_fetch_fields($result);
+$fields = mysqli_fetch_fields($result);
 
-var_dump($row);
+foreach ($fields as $field){
+    echo $field->name;
+};
