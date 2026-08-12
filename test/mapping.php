@@ -3,9 +3,9 @@
 $mapping = [
     
     'pet' => [
-        'cat' => 'Cat',
-        'dog' => 'Dog',
-        'bird' => 'Bird',
+        'type' => 'select',
+        'table' => 'test_pets',
+        'value' => 'Bird',
         'fish' => ' Fish'
     ]
 ];
