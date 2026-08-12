@@ -1,5 +1,5 @@
 <?php
-
+echo "hello";
 require ("dbconnect.php");
 
 $sql = "SELECT * FROM plans";
