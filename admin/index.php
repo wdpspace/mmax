@@ -8,8 +8,8 @@ $result = mysqli_query($conn, $sql);
 
 $fields = mysqli_fetch_fields($result);
 
-while($fields){
-    echo"Field: {$fields->name} - Type: {$fields->type}";
+foreach($fields as $field){
+    echo"Field: {$field->name} - Type: {$field->type}";
 }
 
 ?>
