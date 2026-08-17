@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql);
 $fields = mysqli_fetch_fields($result);
 
 while($fields){
-    echo"Field: {$field->name} - Type: {$field->type}";
+    echo"Field: {$fields->name} - Type: {$fields->type}";
 }
 
 ?>
