@@ -20,19 +20,18 @@ $opt_carrier = [];
 while ($row = mysqli_fetch_assoc($result)) {
     $opt_carrier[] = $row;
 }
-
+/*
 echo "<pre>";
 print_r($mapping);
 echo "</pre>";
+*/
 
-
-/*
 echo "<pre>";
 print_r($opt_carrier);
 echo "</pre>";
-*/
 
-?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +62,12 @@ echo "</pre>";
                         echo "<td>";
                         
                             if(array_key_exists($field->name, $mapping)){
-                                echo "yes";
+                                echo "<select name={$field->name}>";
+                                    foreach($opt_carrier as $carrier){
+                                        echo "<option value={$carrier['carrier']}>$carrier['carrier']}</option>";
+                                    }
+
+                                echo "</select>";
                             }
                             else{
                                 echo "no";
