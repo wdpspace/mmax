@@ -21,6 +21,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     $opt_carrier[] = $row;
 }
 
+echo "<pre>";
+print_r($mapping);
+echo "</pre>";
+
+
 /*
 echo "<pre>";
 print_r($opt_carrier);
