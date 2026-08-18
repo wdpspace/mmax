@@ -1,22 +1,31 @@
 <?php
 
 require ("dbconnect.php");
+$conn = dbconnect();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
-    
 
 }
 
 $sql = "SELECT * FROM plans";
-$conn = dbconnect();
 $result = mysqli_query($conn, $sql);
-
 $fields = mysqli_fetch_fields($result);
 
+$sql = "SELECT * FROM opt_carrier";
+$result = mysqli_query($conn, $sql);
+
+$opt_carrier = [];
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $opt_carrier[] = $row;
+}
+
+echo "<pre>";
+print_r($opt_carrier);
+echo "</pre>";
 
 ?>
-
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,24 +40,13 @@ $fields = mysqli_fetch_fields($result);
     <form action="">
         <table>
             <thead>
-                <tr>
-                    <?php foreach($fields as $field){
-                            echo "<th>" . $field->name . "</th>";
-                        }
-                    ?>
+                <tr> 
+                    <th>Field</th>
+                    <th>Value</th>
                 </tr>
             </thead>
             <tbody>
-                    <?php
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>";
-                            foreach ($row as $value){
-                                echo "<td>$value</td>";
-                            }
-                        echo "</tr>";
-                    }
-
-                    ?>
+                
             
             </tbody>
         </table>
@@ -58,3 +56,5 @@ $fields = mysqli_fetch_fields($result);
 
 </body>
 </html>
+
+-->
