@@ -20,12 +20,13 @@ while ($row = mysqli_fetch_assoc($result)) {
     $opt_carrier[] = $row;
 }
 
+/*
 echo "<pre>";
 print_r($opt_carrier);
 echo "</pre>";
-
+*/
 ?>
-<!--
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,8 +47,10 @@ echo "</pre>";
                 </tr>
             </thead>
             <tbody>
-                
-            
+                <tr>
+                    <td>field name</td>
+                    <td>input box</td>
+                </tr>
             </tbody>
         </table>
     </form>
@@ -57,4 +60,3 @@ echo "</pre>";
 </body>
 </html>
 
--->
