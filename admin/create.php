@@ -47,10 +47,18 @@ echo "</pre>";
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>field name</td>
-                    <td>input box</td>
-                </tr>
+                <?php
+                    foreach ($fields as $field){
+                        echo "<tr>";
+                        echo "<td>";
+                        echo $field->name;
+                        echo "</td>";
+                        echo "<td>";
+                        echo "input box";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                ?>
             </tbody>
         </table>
     </form>
