@@ -55,7 +55,7 @@ echo "</pre>";
                         echo "</td>";
                         echo "<td>";
                         
-                            if(array_key_exist($field->name, $opt_carrier)){
+                            if(array_key_exists($field->name, $opt_carrier)){
                                 echo "yes";
                             }
                             else{
