@@ -1,6 +1,7 @@
 <?php
 
 require ("dbconnect.php");
+require ("dropdown_mapping.php");
 $conn = dbconnect();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -20,10 +21,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     $opt_carrier[] = $row;
 }
 
-
+/*
 echo "<pre>";
 print_r($opt_carrier);
 echo "</pre>";
+*/
 
 ?>
 
@@ -55,7 +57,7 @@ echo "</pre>";
                         echo "</td>";
                         echo "<td>";
                         
-                            if(array_key_exists($field->name, $opt_carrier)){
+                            if(array_key_exists($field->name, $mapping)){
                                 echo "yes";
                             }
                             else{
