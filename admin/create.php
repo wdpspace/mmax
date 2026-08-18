@@ -20,11 +20,11 @@ while ($row = mysqli_fetch_assoc($result)) {
     $opt_carrier[] = $row;
 }
 
-/*
+
 echo "<pre>";
 print_r($opt_carrier);
 echo "</pre>";
-*/
+
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +55,7 @@ echo "</pre>";
                         echo "</td>";
                         echo "<td>";
                         
-                            if(in_array($field->name, $opt_carrier)){
+                            if(array_key_exist($field->name, $opt_carrier)){
                                 echo "yes";
                             }
                             else{
