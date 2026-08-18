@@ -54,7 +54,14 @@ echo "</pre>";
                         echo $field->name;
                         echo "</td>";
                         echo "<td>";
-                        echo "input box";
+                        
+                            if(in_array($field->name, $opt_carrier)){
+                                echo "yes";
+                            }
+                            else{
+                                echo "no";
+                            }
+                        }
                         echo "</td>";
                         echo "</tr>";
                     }
