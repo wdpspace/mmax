@@ -62,9 +62,9 @@ echo "</pre>";
                         echo "<td>";
                         
                             if(array_key_exists($field->name, $mapping)){
-                                echo "<select name={$field->name}>";
+                                echo "<select name='{$field->name}'>";
                                     foreach($opt_carrier as $carrier){
-                                        echo "<option value={$carrier['carrier']}>$carrier['carrier']}</option>";
+                                        echo "<option value={$carrier['carrier']}>{$carrier['carrier']}</option>";
                                     }
 
                                 echo "</select>";
