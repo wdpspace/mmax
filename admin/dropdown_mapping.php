@@ -7,7 +7,7 @@
             "id" => "carrier",
             "name" => "carrier",
             "table" => "opt_carrier"
-        ]
+        ],
 
         "gen_country" => [
             "label" => "country",
