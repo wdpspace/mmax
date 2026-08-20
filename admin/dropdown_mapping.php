@@ -3,8 +3,9 @@
     $mapping = [
 
         "gen_carrier" => [
-            "label" => "Carrier",
-            "type" => "select",   
+            "label" => "carrier",
+            "id" => "carrier",
+            "name" => "carrier",
             "table" => "opt_carrier"
         ]
 

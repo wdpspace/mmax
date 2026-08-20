@@ -60,17 +60,21 @@ echo "</pre>";
                         echo $field->name;
                         echo "</td>";
                         echo "<td>";
-                        
+                            // Check if field name exit in mapping array.
                             if(array_key_exists($field->name, $mapping)){
-                                echo "<select name='{$field->name}'>";
-                                    foreach($opt_carrier as $carrier){
-                                        echo "<option value={$carrier['carrier']}>{$carrier['carrier']}</option>";
-                                    }
-
-                                echo "</select>";
+                            
+                                $table = $mapping[$field->name]['table'];
+                                $label = $mapping[$field->name]['label'];
+                                $sql = "SELECT * FROM $table";
+                                $result = mysqli_query($conn, $sql);
+                                while($row = mysqli_fetch_assoc($result)){
+                                    echo "<option value='$label'>$label</option>";
+                                }
                             }
                             else{
-                                echo "no";
+                                echo "<label for="$field->name">$field->name</label>";
+                                echo "<input type="text" name="$field->name" id="$field->name">"                           
+                            // If it doesn't exist, then create input field.
                             }
                         
                         echo "</td>";
