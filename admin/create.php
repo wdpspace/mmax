@@ -72,8 +72,8 @@ echo "</pre>";
                                 }
                             }
                             else{
-                                echo "<label for=$field->name>$field->name</label>";
-                                echo "<input type="text" name="$field->name" id="$field->name">"                           
+                                echo "<label for='{$field->name}'>$field->name</label>";
+                                echo "<input type= 'text' name='{$field->name}' id='{$field->name}'>"                           
                             // If it doesn't exist, then create input field.
                             }
                         
