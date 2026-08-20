@@ -62,14 +62,19 @@ echo "</pre>";
                         echo "<td>";
                             // Check if field name exit in mapping array.
                             if(array_key_exists($field->name, $mapping)){
-                            
                                 $table = $mapping[$field->name]['table'];
                                 $label = $mapping[$field->name]['label'];
+                                $name = $mapping[$field->name]['name'];
+                                $id = $mapping[$field->name]['id'];
+
                                 $sql = "SELECT * FROM $table";
                                 $result = mysqli_query($conn, $sql);
-                                while($row = mysqli_fetch_assoc($result)){
-                                    echo "<option value='$label'>$label</option>";
-                                }
+
+                                echo "<select name='{$name}' id='{$id}'">
+                                    while($row = mysqli_fetch_assoc($result)){
+                                        echo "<option value='{$row[$field->name]}'>$row[$field->name]</option>";
+                                    }
+                                echo "</select>";
                             }
                             else{
                                 echo "<label for='{$field->name}'>$field->name</label>";
