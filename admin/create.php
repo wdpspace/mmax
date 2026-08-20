@@ -72,7 +72,7 @@ echo "</pre>";
 
                                 echo "<select name='{$name}' id='{$id}'>";
                                     while($row = mysqli_fetch_assoc($result)){
-                                        echo "<option value='{$row[$field->name]}'>$row[$field->name]</option>";
+                                        echo "<option value='{$row[$label]}'>$row[$label]</option>";
                                     }
                                 echo "</select>";
                             }
