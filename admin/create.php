@@ -70,7 +70,7 @@ echo "</pre>";
                                 $sql = "SELECT * FROM $table";
                                 $result = mysqli_query($conn, $sql);
 
-                                echo "<select name='{$name}' id='{$id}'">
+                                echo "<select name='{$name}' id='{$id}'>";
                                     while($row = mysqli_fetch_assoc($result)){
                                         echo "<option value='{$row[$field->name]}'>$row[$field->name]</option>";
                                     }
