@@ -9,4 +9,12 @@
             "table" => "opt_carrier"
         ]
 
+        "gen_country" => [
+            "label" => "country",
+            "id" => "country",
+            "name" => "country",
+            "table" => "opt_country"
+        ]
+
+
     ];
