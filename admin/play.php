@@ -10,12 +10,12 @@ $sql2 = "SELECT * FROM opt_country";
 
 $result = mysqli_query($conn, $sql1);
 while ($row = mysqli_fetch_assoc($result)){
-    $dropdown[] = $row;
+    $dropdown['carrier'][] = $row;
 }
 
 $result = mysqli_query($conn, $sql2);
 while ($row = mysqli_fetch_assoc($result)){
-    $dropdown[] = $row;
+    $dropdown['country'][] = $row;
 }
 
 echo "<pre>";
