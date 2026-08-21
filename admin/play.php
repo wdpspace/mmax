@@ -4,10 +4,22 @@ require ("dbconnect.php");
 $conn = dbconnect();
 
 $dropdowns = [];
+$fields = [];
 
-$sql1 = "SELECT * FROM opt_carrier";
-$sql2 = "SELECT * FROM opt_country";
+$sql1 = "SELECT * FROM plans";
+$sql2 = "SELECT * FROM opt_carrier";
+$sql3 = "SELECT * FROM opt_country";
 
+$result = mysqli_query($conn, $sql1);
+while($row = mysqli_fetch_fields){
+    $fields[] = $rows;
+}
+
+echo "<pre>";
+print_r($fields);
+echo "</pre>";
+
+/*
 $result = mysqli_query($conn, $sql1);
 while ($row = mysqli_fetch_assoc($result)){
     $dropdown['carrier'][] = $row;
@@ -24,3 +36,4 @@ while ($row = mysqli_fetch_assoc($result)){
 echo "<pre>";
 print_r($dropdown);
 echo "</pre>";
+*/
