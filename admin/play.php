@@ -9,6 +9,7 @@ $conn = dbconnect();
 $queries = [
     'carrier' => 'SELECT * FROM opt_carrier',
     'country' => 'SELECT * FROM opt_country'
+    // Add addtional dropdown options here ...
 ];
 
 $dropdown = [];
