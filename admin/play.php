@@ -14,7 +14,7 @@ while ($row = mysqli_fetch_assoc($result)){
 }
 
 $result = mysqli_query($conn, $sql2);
-while ($row = mysql_fetch_assoc($result)){
+while ($row = mysqli_fetch_assoc($result)){
     $dropdown[] = $row;
 }
 
