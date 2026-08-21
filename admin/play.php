@@ -18,6 +18,10 @@ while ($row = mysqli_fetch_assoc($result)){
     $dropdown['country'][] = $row;
 }
 
+echo $dropdown['carrier'][0];
+
+/*
 echo "<pre>";
 print_r($dropdown);
 echo "</pre>";
+*/
