@@ -8,6 +8,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 }
 
+// Preload all data into arrays
+
+$dropdowns = [];
+
 $sql = "SELECT * FROM plans";
 $result = mysqli_query($conn, $sql);
 $fields = mysqli_fetch_fields($result);
