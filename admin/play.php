@@ -6,8 +6,6 @@ $conn = dbconnect();
 $dropdowns = [];
 
 $sql1 = "SELECT * FROM plans";
-$sql2 = "SELECT * FROM opt_carrier";
-$sql3 = "SELECT * FROM opt_country";
 
 $result = mysqli_query($conn, $sql1);
 $fields = mysqli_fetch_fields($result);
