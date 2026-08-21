@@ -12,7 +12,7 @@ $sql3 = "SELECT * FROM opt_country";
 
 $result = mysqli_query($conn, $sql1);
 while($row = mysqli_fetch_fields($result)){
-    $fields[] = $rows;
+    $fields[] = $row;
 }
 
 echo "<pre>";
