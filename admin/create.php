@@ -8,16 +8,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 }
 
-// Preload all data into arrays
+// Preload all dropdown data into a DROPDOWN array
 
-$dropdowns = [];
+$dropdown = [];
 
-$sql = "SELECT * FROM plans";
-$result = mysqli_query($conn, $sql);
-$fields = mysqli_fetch_fields($result);
+$sql_carrier = "SELECT * FROM opt_carrier";
+$sql_country = "SELECT * FROM opt_country";
 
-$sql = "SELECT * FROM opt_carrier";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql_carrier);
+while($row = mysqli_fetch_assoc($result)){
+    $dropdown[] = $row;
+}
 
 $opt_carrier = [];
 

@@ -1,4 +1,19 @@
 <?php
+    
+    // List of all Fields with dropdowns
+
+
+
+    /*  Template
+        -----------------
+
+        "Fieldname" => [
+
+        
+        
+        ]
+    
+    */
 
     $mapping = [
 

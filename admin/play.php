@@ -1,32 +1,24 @@
 <?php
 
 require ("dbconnect.php");
+require ("dropdown_mapping.php");
 $conn = dbconnect();
 
-$dropdowns = [];
+// Preload all dropdown data into a DROPDOWN array
 
-$sql1 = "SELECT * FROM plans";
+$queries = [
+    'carrier' => 'SELECT * FROM opt_carrier',
+    'country' => 'SELECT * FROM opt_country'
+];
 
-$result = mysqli_query($conn, $sql1);
-$fields = mysqli_fetch_fields($result);
+$dropdown = [];
 
-echo "<pre>";
-print_r($fields);
-echo "</pre>";
-
-/*
-$result = mysqli_query($conn, $sql1);
-while ($row = mysqli_fetch_assoc($result)){
-    $dropdown['carrier'][] = $row;
+foreach($queries as $key => $sql){
+    $result = mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+        $dropdown[$key][] = $row;
+    }
 }
-
-$result = mysqli_query($conn, $sql2);
-while ($row = mysqli_fetch_assoc($result)){
-    $dropdown['country'][] = $row;
-}
-
-//print_r($dropdown['carrier'][0]);
-
 
 echo "<pre>";
 print_r($dropdown);
