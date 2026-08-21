@@ -23,4 +23,3 @@ foreach($queries as $key => $sql){
 echo "<pre>";
 print_r($dropdown);
 echo "</pre>";
-*/
