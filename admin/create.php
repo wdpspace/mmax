@@ -58,15 +58,15 @@ foreach($queries as $key => $sql){
                                 <option value="<?=$option ?>"><?=$option ?></option>
                                 <?php } ?>
                             </select>
-                        <?php }
-                    ?></td>
-                </tr>
-                <?php else{ ?>
+                        <?php } 
+                        else{ ?>
                         <input type="text" name="<?=$field->name ?>" id="<?=$field->name ?>">
-
-                    <?php } 
-                    
-                }?>
+                        
+                        <?php }  ?>
+                    </td>
+                </tr>
+                <?php } ?>
+                
             
             </tbody>
         </table>
