@@ -62,7 +62,7 @@ $fields = mysqli_fetch_fields($result);
                         if(array_key_exists($field->name, $dropdown)){ ?>
                             <select name="<?=$field->name ?>" id="<?=$field->name ?>">
                                 <?php foreach($dropdown[$field->name] as $option){ ?>
-                                <option value="<?=$option ?>"><?=$option ?></option>
+                                <option value="<?=$option[$field->name] ?>"><?=$option[$field->name] ?></option>
                                 <?php } ?>
                             </select>
                         <?php } 
