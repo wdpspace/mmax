@@ -1,35 +1,12 @@
 <?php
     
-    // List of all Fields with dropdowns
+    // This file shows:
+    // -- which FIELDS should be dropdown
 
 
 
-    /*  Template
-        -----------------
-
-        "Fieldname" => [
-
-        
-        
-        ]
-    
-    */
-
-    $mapping = [
-
-        "gen_carrier" => [
-            "label" => "carrier",
-            "id" => "carrier",
-            "name" => "carrier",
-            "table" => "opt_carrier"
-        ],
-
-        "gen_country" => [
-            "label" => "country",
-            "id" => "country",
-            "name" => "country",
-            "table" => "opt_country"
-        ]
-
-
+    $mapping = ['gen_carrier',
+                'gen_country',
+                'gen_currency'
     ];
+
