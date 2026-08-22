@@ -18,7 +18,7 @@ $dropdown = [];
 foreach($queries as $key => $sql){
     $result = mysqli_query($conn, $sql);
     while($row = mysqli_fetch_assoc($result)){
-        $dropdown[$key] = $row;
+        $dropdown[$key][] = $row;
     }
 }
 
