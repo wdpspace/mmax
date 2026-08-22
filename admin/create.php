@@ -10,30 +10,20 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 // Preload all dropdown data into a DROPDOWN array
 
+$queries = [
+    'gen_carrier' => 'SELECT carrier FROM opt_carrier',
+    'gen_country' => 'SELECT country FROM opt_country',
+    'gen_currency' => 'SELECT currency FROM opt_country',
+    // Add addtional dropdown options here ...
+];
+
 $dropdown = [];
 
-$sql_carrier = "SELECT * FROM opt_carrier";
-$sql_country = "SELECT * FROM opt_country";
-
-$result = mysqli_query($conn, $sql_carrier);
-while($row = mysqli_fetch_assoc($result)){
-    $dropdown[] = $row;
-}
-
-$opt_carrier = [];
-
-while ($row = mysqli_fetch_assoc($result)) {
-    $opt_carrier[] = $row;
-}
-/*
-echo "<pre>";
-print_r($mapping);
-echo "</pre>";
-*/
-
-echo "<pre>";
-print_r($opt_carrier);
-echo "</pre>";
+foreach($queries as $key => $sql){
+    $result = mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+        $dropdown[$key][] = $row;
+    }
 
 ?>
 
@@ -58,44 +48,28 @@ echo "</pre>";
                 </tr>
             </thead>
             <tbody>
-                <?php
-                    foreach ($fields as $field){
-                        echo "<tr>";
-                        echo "<td>";
-                        echo $field->name;
-                        echo "</td>";
-                        echo "<td>";
-                            // Check if field name exit in mapping array.
-                            if(array_key_exists($field->name, $mapping)){
-                                $table = $mapping[$field->name]['table'];
-                                $label = $mapping[$field->name]['label'];
-                                $name = $mapping[$field->name]['name'];
-                                $id = $mapping[$field->name]['id'];
+                <?php foreach ($fields as $field) {?>
+                <tr>
+                    <td><?= $field->name; ?></td>
+                    <td><?php  
+                        if(array_key_exists($field->name, $dropdown)){ ?>
+                            <select name="<?=$field->name ?>" id="<?=$field->name ?>">
+                                <?php foreach($dropdown[$field->name] as $option){ ?>
+                                <option value="<?=$option ?>"><?=$option ?></option>
+                                <?php } ?>
+                            </select>
+                        <?php }
+                    ?></td>
+                </tr>
+                <?php } 
+                        else{ ?>
+                        <input type="text" name="<?=$field->name ?>" id="<?=$field->name ?>">
 
-                                $sql = "SELECT * FROM $table";
-                                $result = mysqli_query($conn, $sql);
-
-                                echo "<select name='{$name}' id='{$id}'>";
-                                    while($row = mysqli_fetch_assoc($result)){
-                                        echo "<option value='{$row[$label]}'>$row[$label]</option>";
-                                    }
-                                echo "</select>";
-                            }
-                            else{
-                                echo "<input type= 'text' name='{$field->name}' id='{$field->name}'>";                          
-                            // If it doesn't exist, then create input field.
-                            }
-                        
-                        echo "</td>";
-                        echo "</tr>";
-                    }
-                ?>
+                    <?php } ?>
+            
             </tbody>
         </table>
     </form>
-
-
-
 </body>
 </html>
 
