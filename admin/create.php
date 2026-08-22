@@ -61,11 +61,12 @@ foreach($queries as $key => $sql){
                         <?php }
                     ?></td>
                 </tr>
-                <?php } 
-                        else{ ?>
+                <?php else{ ?>
                         <input type="text" name="<?=$field->name ?>" id="<?=$field->name ?>">
 
-                    <?php } ?>
+                    <?php } 
+                    
+                }?>
             
             </tbody>
         </table>
