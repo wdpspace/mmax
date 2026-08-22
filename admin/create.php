@@ -24,6 +24,13 @@ foreach($queries as $key => $sql){
     while($row = mysqli_fetch_assoc($result)){
         $dropdown[$key][] = $row;
     }
+}
+
+// Fields
+
+$sql = "SELECT * FROM plans";
+$result = mysqli_query($conn, $sql);
+$fields = mysqli_fetch_fields($result);
 
 ?>
 
