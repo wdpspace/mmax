@@ -245,5 +245,6 @@ $mapping_create = [
     'ent_comment' => [
         'visible' => true,
         'comment' => ''
-    ];
+    ]
+];
 
