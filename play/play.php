@@ -32,7 +32,7 @@ foreach($queries as $key => $sql){
 }
 
 foreach($fields as $field) {
-    echo $field->name;
+    echo $field->name . "<br>";
 /*
     if(isset($dropdown[$field->name])){ // use isset instead?
         echo '<select name="' . $field->name . '">';
