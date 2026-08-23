@@ -27,7 +27,7 @@ $mapping = [
         'comment' => ''
     ],
 
-    'gen_county' => [
+    'gen_country' => [
         'visible' => 'true',
         'comment' => ''
     ],
