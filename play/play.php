@@ -32,7 +32,12 @@ foreach($queries as $key => $sql){
 }
 
 foreach($fields as $field){
-    echo $field->name;
+    if(array_key_exist($field->name, $dropdown)){
+        echo $field->name " is a dropdown. <br>";
+    }
+    else{
+        echo $field->name " is an input. <br>";
+    }
 }
 
 /*
