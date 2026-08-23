@@ -27,7 +27,7 @@ $queries = [
 foreach($queries as $key => $sql){
     $result = mysqli_query($conn, $sql);
     while($row = mysqli_fetch_assoc($result)){
-        $dropdown[$key][] = $row;
+        $dropdown[$key][] = $row[0];
     }
 }
 
@@ -35,7 +35,7 @@ foreach($fields as $field) {
     if(isset($dropdown[$field->name])){ // use isset instead?
         echo '<select name="' . $field->name . '">';
         foreach ($dropdown[$field->name] as $option){
-            echo '<option value = "' .$option[$field->name]. '">';
+            echo '<option value = "' .$option. '">' .$option. '</option>';
         }
         echo '</select>';
     
