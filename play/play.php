@@ -1,6 +1,6 @@
 <?php
 
-require ("config/dbconnect.php");
+require ("/config/dbconnect.php");
 $conn = dbconnect();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
