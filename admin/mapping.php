@@ -70,8 +70,8 @@ $mapping_create = [
     'fee_currency' => [
         'visible' => true,
         'comment' => ''
-    ],
-
+    ]
+/*
     'fee_rate' => [
         'visible' => true,
         'comment' => ''
@@ -246,5 +246,6 @@ $mapping_create = [
         'visible' => true,
         'comment' => ''
     ]
+*/
 ];
 

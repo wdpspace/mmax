@@ -61,13 +61,14 @@ foreach($queries as $key => $sql){
                 <?php
                     foreach($fields as $field) {
 
-                        if($mapping_create[$field->name]['visible']){
+                        if(isset($mapping_create[$field->name]) && $mapping_create[$field->name]['visible']){
 
                             echo '<tr>';
                             echo '<td>'.$field->name.'</td>';
                             echo '<td>';
-                                if(isset($dropdown[$field->name])){ // use isset instead?
+                                if(isset($dropdown[$field->name])){ 
                                     echo '<select name="' . $field->name . '">';
+                                    echo '<option value = ""></option>'; // Blank value
                                     foreach ($dropdown[$field->name] as $option){
                                         echo '<option value = "' .$option. '">' .$option. '</option>';
                                     }
