@@ -21,6 +21,7 @@ $queries = [
     'gen_carrier' => 'SELECT carrier FROM opt_carrier',
     'gen_country' => 'SELECT country FROM opt_country',
     'fee_currency' => 'SELECT currency FROM opt_country',
+    'gen_nationality' => 'SELECT nationality FROM opt_country';
     // Add addtional fields here that should be dropdown options ...
 ];
 
