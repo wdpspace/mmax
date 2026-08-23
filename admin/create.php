@@ -74,7 +74,7 @@ foreach($queries as $key => $sql){
                     echo '</tr>';
                     }
                 ?>
-            </tbody> <input type="text">
+            </tbody>
         </table>
     </form>
 </body>
