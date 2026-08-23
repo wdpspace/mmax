@@ -20,7 +20,7 @@ $dropdown = []; // Initialise as an empty array.
 $queries = [
     'gen_carrier' => 'SELECT carrier FROM opt_carrier',
     'gen_country' => 'SELECT country FROM opt_country',
-    'gen_currency' => 'SELECT currency FROM opt_country',
+    'fee_currency' => 'SELECT currency FROM opt_country',
     // Add addtional dropdown options here ...
 ];
 
