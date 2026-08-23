@@ -31,7 +31,12 @@ foreach($queries as $key => $sql){
     }
 }
 
+foreach($fields as $field){
+    echo $field->name;
+}
 
+/*
 echo "<pre>";
 print_r($dropdown);
 echo "</pre>";
+*/
