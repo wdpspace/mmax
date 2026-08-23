@@ -37,7 +37,7 @@ foreach($fields as $field) {
         foreach ($dropdown[$field->name] as $option){
             echo '<option value = "' .$option. '">' .$option. '</option>';
         }
-        echo '</select>';
+        echo '</select><br>';
     
     
     //echo $field->name. " is a dropdown. <br>";
