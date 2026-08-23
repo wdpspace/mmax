@@ -32,6 +32,8 @@ foreach($queries as $key => $sql){
 }
 
 foreach($fields as $field) {
+    echo $field->name;
+/*
     if(isset($dropdown[$field->name])){ // use isset instead?
         echo '<select name="' . $field->name . '">';
         foreach ($dropdown[$field->name] as $option){
@@ -44,10 +46,14 @@ foreach($fields as $field) {
     } else {
         echo $field->name. " is an input. <br>";
     }
+*/
 }
 
 
+
+/*
 echo "<pre>";
 print_r($dropdown);
 echo "</pre>";
+*/
 
