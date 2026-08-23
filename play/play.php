@@ -21,7 +21,7 @@ $queries = [
     'gen_carrier' => 'SELECT carrier FROM opt_carrier',
     'gen_country' => 'SELECT country FROM opt_country',
     'fee_currency' => 'SELECT currency FROM opt_country',
-    // Add addtional dropdown options here ...
+    // Add addtional fields here that should be dropdown options ...
 ];
 
 foreach($queries as $key => $sql){
@@ -33,7 +33,14 @@ foreach($queries as $key => $sql){
 
 foreach($fields as $field) {
     if(isset($dropdown[$field->name])){ // use isset instead?
-        echo $field->name. " is a dropdown. <br>";
+        echo '<select name="' . $field->name . '">';
+        foreach ($dropdown[$field->name] as $option){
+            echo '<option value = "' .$option. '">';
+        }
+        echo '</select>';
+    
+    
+    //echo $field->name. " is a dropdown. <br>";
     } else {
         echo $field->name. " is an input. <br>";
     }
