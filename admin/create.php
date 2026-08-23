@@ -1,7 +1,6 @@
 <?php
 
-require ("dbconnect.php");
-require ("dropdown_mapping.php");
+require ("../config/dbconnect.php");
 $conn = dbconnect();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -12,24 +11,23 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 $sql = "SELECT * FROM plans";
 $result = mysqli_query($conn, $sql);
-$fields = mysqli_fetch_fields($result);
+$fields = mysqli_fetch_fields($result); // Array of objects
 
-// DROPDOWN - Preload all the 
-// Preload all dropdown data into a DROPDOWN array
+// DROPDOWN - Preload dropdown options into array
+
+$dropdown = []; // Initialise as an empty array.
 
 $queries = [
     'gen_carrier' => 'SELECT carrier FROM opt_carrier',
     'gen_country' => 'SELECT country FROM opt_country',
-    'gen_currency' => 'SELECT currency FROM opt_country',
-    // Add addtional dropdown options here ...
+    'fee_currency' => 'SELECT currency FROM opt_country',
+    // Add addtional fields here that should be dropdown options ...
 ];
-
-$dropdown = [];
 
 foreach($queries as $key => $sql){
     $result = mysqli_query($conn, $sql);
-    while($row = mysqli_fetch_assoc($result)){
-        $dropdown[$key][] = $row;
+    while($row = mysqli_fetch_row($result)){
+        $dropdown[$key][] = $row[0];
     }
 }
 
@@ -57,26 +55,26 @@ foreach($queries as $key => $sql){
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($fields as $field) {?>
-                <tr>
-                    <td><?= $field->name; ?></td>
-                    <td><?php  
-                        if(array_key_exists($field->name, $dropdown)){ ?>
-                            <select name="<?=$field->name ?>" id="<?=$field->name ?>">
-                                <?php foreach($dropdown[$field->name] as $option){ ?>
-                                <option value="<?=$option[$field->name] ?>"><?=$option[$field->name] ?></option>
-                                <?php } ?>
-                            </select>
-                        <?php } 
-                        else{ ?>
-                        <input type="text" name="<?=$field->name ?>" id="<?=$field->name ?>">
-                        
-                        <?php }  ?>
-                    </td>
-                </tr>
-                <?php } ?>
-                
-            
+                <?php
+                    foreach($fields as $field) {
+
+                    echo '<tr>';
+                    echo '<td>'.$field->name.'</td>';
+                    echo '<td>';
+                        if(isset($dropdown[$field->name])){ // use isset instead?
+                            echo '<select name="' . $field->name . '">';
+                            foreach ($dropdown[$field->name] as $option){
+                                echo '<option value = "' .$option. '">' .$option. '</option>';
+                            }
+                            echo '</select>';
+                        //echo $field->name. " is a dropdown. <br>";
+                        } else {
+                            echo $field->name. " is an input. <br>";
+                        }
+                    echo '</td>';
+                    echo '</tr>';
+                    }
+                ?>
             </tbody>
         </table>
     </form>
