@@ -1,6 +1,7 @@
 <?php
 
 require ("../config/dbconnect.php");
+require ("mapping.php");
 $conn = dbconnect();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -59,20 +60,23 @@ foreach($queries as $key => $sql){
                 <?php
                     foreach($fields as $field) {
 
-                    echo '<tr>';
-                    echo '<td>'.$field->name.'</td>';
-                    echo '<td>';
-                        if(isset($dropdown[$field->name])){ // use isset instead?
-                            echo '<select name="' . $field->name . '">';
-                            foreach ($dropdown[$field->name] as $option){
-                                echo '<option value = "' .$option. '">' .$option. '</option>';
-                            }
-                            echo '</select>';
-                        } else {
-                            echo '<input type="text" name="'.$field->name.'">';
+                        if($mapping[$field->name]['visibility'] == 'true'){
+
+                            echo '<tr>';
+                            echo '<td>'.$field->name.'</td>';
+                            echo '<td>';
+                                if(isset($dropdown[$field->name])){ // use isset instead?
+                                    echo '<select name="' . $field->name . '">';
+                                    foreach ($dropdown[$field->name] as $option){
+                                        echo '<option value = "' .$option. '">' .$option. '</option>';
+                                    }
+                                    echo '</select>';
+                                } else {
+                                    echo '<input type="text" name="'.$field->name.'">';
+                                }
+                            echo '</td>';
+                            echo '</tr>';
                         }
-                    echo '</td>';
-                    echo '</tr>';
                     }
                 ?>
             </tbody>
