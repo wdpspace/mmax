@@ -40,7 +40,7 @@ $mapping_create = [
     'gen_type' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
     
     'gen_plan_name' => [
         'visible' => true,
@@ -50,7 +50,8 @@ $mapping_create = [
     'gen_contract_term' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
+
     'gen_partner_offer' => [
         'visible' => true,
         'comment' => ''
@@ -59,7 +60,8 @@ $mapping_create = [
     'gen_premium_number' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
+
     'gen_url' => [
         'visible' => true,
         'comment' => ''
@@ -68,7 +70,8 @@ $mapping_create = [
     'fee_currency' => [
         'visible' => false,
         'comment' => ''
-    ]
+    ],
+
     'fee_rate' => [
         'visible' => true,
         'comment' => ''
@@ -77,8 +80,8 @@ $mapping_create = [
     'fee_vat' => [
         'visible' => true,
         'comment' => ''
-    ]
----------------
+    ],
+    
     'fee_period' => [
         'visible' => true,
         'comment' => ''
@@ -87,8 +90,8 @@ $mapping_create = [
     'fee_activation' => [
         'visible' => true,
         'comment' => ''
-    ]
-
+    ],
+    
     'fee_other' => [
         'visible' => true,
         'comment' => ''
@@ -97,12 +100,12 @@ $mapping_create = [
     'fee_promo_available' => [
         'visible' => true,
         'comment' => 'Optional'
-    ]
+    ],
 
     'fee_promo_rate' => [
         'visible' => true,
         'comment' => 'Optional'
-    ]
+    ],
 
     'fee_promo_period' => [
         'visible' => true,
@@ -112,12 +115,12 @@ $mapping_create = [
     'data_national' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'data_bonus' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'data_speed' => [
         'visible' => true,
@@ -127,12 +130,12 @@ $mapping_create = [
     'data_rollover_available' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'data_rollover' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'data_uaewifi_available' => [
         'visible' => true,
@@ -142,12 +145,12 @@ $mapping_create = [
     'data_uaewifi_uom' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'data_uaewifi_value' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'minutes_type' => [
         'visible' => true,
@@ -157,12 +160,12 @@ $mapping_create = [
     'minutes_total' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'minutes_national' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'minutes_international' => [
         'visible' => true,
@@ -172,12 +175,12 @@ $mapping_create = [
     'minutes_one_country' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'minutes_one_number' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'roam_available' => [
         'visible' => true,
@@ -187,12 +190,12 @@ $mapping_create = [
     'roam_package_name' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'roam_minutes' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'roam_data' => [
         'visible' => true,
@@ -202,7 +205,7 @@ $mapping_create = [
     'roam_gcc' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'ent_available' => [
         'visible' => true,
@@ -212,7 +215,7 @@ $mapping_create = [
     'ent_eligible' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'ent_disney' => [
         'visible' => true,
@@ -222,7 +225,7 @@ $mapping_create = [
     'ent_prime' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'ent_shahid' => [
         'visible' => true,
@@ -232,7 +235,7 @@ $mapping_create = [
     'ent_osn' => [
         'visible' => true,
         'comment' => ''
-    ]
+    ],
 
     'ent_starzplay' => [
         'visible' => true,
