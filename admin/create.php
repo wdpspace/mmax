@@ -54,6 +54,7 @@ foreach($queries as $key => $sql){
                 <tr> 
                     <th>Field</th>
                     <th>Value</th>
+                    <th>Comment</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,6 +76,7 @@ foreach($queries as $key => $sql){
                                     echo '<input type="text" name="'.$field->name.'">';
                                 }
                             echo '</td>';
+                            echo '<td>'.$mapping_create[$field->name]['comment'].'</td>';
                             echo '</tr>';
                         }
                     }
