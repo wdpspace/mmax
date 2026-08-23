@@ -32,7 +32,7 @@ foreach($queries as $key => $sql){
 }
 
 foreach($fields as $field) {
-    if(array_key_exists($field->name, $dropdown)){ // use isset instead?
+    if(isset($dropdown[$field->name])){ // use isset instead?
         echo $field->name. " is a dropdown. <br>";
     } else {
         echo $field->name. " is an input. <br>";
