@@ -26,7 +26,7 @@ $queries = [
 
 foreach($queries as $key => $sql){
     $result = mysqli_query($conn, $sql);
-    while($row = mysqli_fetch_assoc($result)){
+    while($row = mysqli_fetch_row($result)){
         $dropdown[$key][] = $row[0];
     }
 }
