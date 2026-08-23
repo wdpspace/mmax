@@ -35,7 +35,7 @@ foreach($fields as $field) {
     if(isset($dropdown[$field->name])){ // use isset instead?
         echo '<select name="' . $field->name . '">';
         foreach ($dropdown[$field->name] as $option){
-            echo '<option value = "' .$option. '">';
+            echo '<option value = "' .$option[$field->name]. '">';
         }
         echo '</select>';
     
