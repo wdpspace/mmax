@@ -8,6 +8,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 }
 
+// FIELDS - Get all the fields from the plans table.
+
+$sql = "SELECT * FROM plans";
+$result = mysqli_query($conn, $sql);
+$fields = mysqli_fetch_fields($result);
+
+// DROPDOWN - Preload all the 
 // Preload all dropdown data into a DROPDOWN array
 
 $queries = [
@@ -26,11 +33,6 @@ foreach($queries as $key => $sql){
     }
 }
 
-// Fields
-
-$sql = "SELECT * FROM plans";
-$result = mysqli_query($conn, $sql);
-$fields = mysqli_fetch_fields($result);
 
 ?>
 
