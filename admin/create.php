@@ -67,15 +67,14 @@ foreach($queries as $key => $sql){
                                 echo '<option value = "' .$option. '">' .$option. '</option>';
                             }
                             echo '</select>';
-                        //echo $field->name. " is a dropdown. <br>";
                         } else {
-                            echo $field->name. " is an input. <br>";
+                            echo '<input type="text" name="'.$field->name.'">';
                         }
                     echo '</td>';
                     echo '</tr>';
                     }
                 ?>
-            </tbody>
+            </tbody> <input type="text">
         </table>
     </form>
 </body>
