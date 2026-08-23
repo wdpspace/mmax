@@ -68,7 +68,7 @@ $mapping_create = [
     ],
 
     'fee_currency' => [
-        'visible' => false,
+        'visible' => true,
         'comment' => ''
     ],
 
