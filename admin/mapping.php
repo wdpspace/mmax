@@ -1,44 +1,44 @@
 <?php
 
-$mapping = [
+$mapping_create = [
 
     'id' => [
-        'visible' => 'false',
+        'visible' => false,
         'comment' => ''
     ],
     
     'config_active' => [
-        'visible' => 'false',
+        'visible' => false,
         'comment' => ''
     ],
 
     'config_created' => [
-        'visible' => 'false',
+        'visible' => false,
         'comment' => ''
     ],
 
     'config_updated' => [
-        'visible' => 'false',
+        'visible' => false,
         'comment' => ''
     ],
 
     'gen_nationality' => [
-        'visible' => 'false',
+        'visible' => false,
         'comment' => ''
     ],
 
     'gen_country' => [
-        'visible' => 'true',
+        'visible' => true,
         'comment' => ''
     ],
 
     'gen_carrier' => [
-        'visible' => 'true',
+        'visible' => true,
         'comment' => 'Select a carrier'
     ],
 
     'gen_type' => [
-        'visible' => 'true',
+        'visible' => true,
         'comment' => ''
     ]
     

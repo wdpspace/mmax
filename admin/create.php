@@ -60,7 +60,7 @@ foreach($queries as $key => $sql){
                 <?php
                     foreach($fields as $field) {
 
-                        if($mapping[$field->name]['visible'] == 'true'){
+                        if($mapping_create[$field->name]['visible']){
 
                             echo '<tr>';
                             echo '<td>'.$field->name.'</td>';
